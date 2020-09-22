@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  dockerwcfservice:
+    image: ${DOCKER_REGISTRY-}dockerwcfservice
+    build:
+      context: .\dockerwcfservice
+      dockerfile: Dockerfile
+    ports:
+      - 8243:8242
+
+
